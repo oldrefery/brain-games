@@ -1,4 +1,8 @@
 const maxNumber = 1000;
-const getRandomNumber = () => Math.trunc(Math.random() * maxNumber) + 1;
+
+const getRandomNumber = () => {
+  const result = Math.random() * maxNumber;
+  return Math.trunc(result) + 1;
+};
 
 export default getRandomNumber;

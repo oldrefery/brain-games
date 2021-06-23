@@ -1,5 +1,55 @@
+import readlineSync from 'readline-sync';
+import getRandomNumber from './utils/generator.js';
+
 const gameEven = () => {
-  console.log('gameEven started');
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
+  let leftGuesses = 3;
+  let hasError = false;
+
+  while (leftGuesses > 0 && !hasError) {
+    // const currentNumber = 3;
+    const currentNumber = getRandomNumber();
+    console.log(`Question: ${currentNumber}`);
+    const answer = readlineSync.question('Your answer: ');
+    switch (answer) {
+      case 'yes':
+        if (currentNumber % 2 === 0) {
+          leftGuesses -= 1;
+          console.log('Correct!');
+        } else {
+          hasError = true;
+          console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+        }
+        break;
+      case 'no':
+        if (currentNumber % 2 === 1) {
+          leftGuesses -= 1;
+          console.log('Correct!');
+        } else {
+          hasError = true;
+          console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
+        }
+        break;
+      default:
+        hasError = true;
+        console.log(
+          `'${answer}' is wrong answer ;(. Correct answer was '${
+            currentNumber % 2 === 0 ? 'yes' : 'no'
+          }'.`,
+        );
+    }
+  }
+
+  if (!hasError) {
+    console.log(`Congratulations, ${name}!`);
+  } else {
+    console.log(`Let's try again, ${name}!`);
+  }
 };
 
 export default gameEven;
