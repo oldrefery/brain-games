@@ -5,3 +5,4 @@
 [![Linter](https://github.com/oldrefery/frontend-project-lvl1/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/oldrefery/frontend-project-lvl1/actions/workflows/npm-publish.yml)
 [![Brain-Game CI](https://github.com/oldrefery/frontend-project-lvl1/actions/workflows/npm-publish.yml/badge.svg?branch=master&event=push)](https://github.com/oldrefery/frontend-project-lvl1/actions/workflows/npm-publish.yml)
 
+
