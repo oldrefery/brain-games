@@ -1,6 +1,6 @@
-import getRandomNumber from './utils/generator.js';
-import greetingAndGetUserName from './cli.js';
-import getAnswer from './utils/get-answer.js';
+import getRandomNumber from '../utils/generator.js';
+import greetingAndGetUserName from '../cli.js';
+import getAnswer from '../utils/get-answer.js';
 
 const gameEven = () => {
   const name = greetingAndGetUserName();
@@ -12,7 +12,7 @@ const gameEven = () => {
 
   while (leftGuesses > 0 && !hasError) {
     // const currentNumber = 3;
-    const currentNumber = getRandomNumber();
+    const currentNumber = getRandomNumber(1, 30);
     console.log(`Question: ${currentNumber}`);
     const answer = getAnswer('Your answer: ');
     switch (answer) {
