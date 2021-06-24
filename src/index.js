@@ -1,11 +1,11 @@
 import greetingAndGetUserName from './cli.js';
 import getAnswer from './utils/get-answer.js';
 
-const startGame = (generateQuestionAndAnswer) => {
+const startGame = (ruleText, generateQuestionAndAnswer) => {
   let leftGuesses = 3;
   let hasError = false;
   const name = greetingAndGetUserName();
-  console.log('What is the result of the expression?');
+  console.log(ruleText);
 
   while (leftGuesses > 0 && !hasError) {
     const { correctAnswer, questionText } = generateQuestionAndAnswer();

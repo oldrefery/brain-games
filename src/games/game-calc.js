@@ -25,7 +25,6 @@ const generateCalculatorStep = () => {
   const num2 = getRandomNumber(1, 30);
   const signs = ['+', '-', '*'];
   const currentSign = signs[getRandomNumber(0, 2)];
-  // const currentSign = '+';
 
   const questionText = `${num1} ${currentSign} ${num2}`;
   const correctAnswer = getCorrectAnswer(num1, currentSign, num2);
@@ -37,6 +36,7 @@ const generateCalculatorStep = () => {
 };
 
 const gameCalculator = () => {
-  startGame(generateCalculatorStep);
+  const ruleText = 'What is the result of the expression?';
+  startGame(ruleText, generateCalculatorStep);
 };
 export default gameCalculator;
