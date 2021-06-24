@@ -10,5 +10,10 @@
 **Calculator game**
 [![asciicast](https://asciinema.org/a/422188.svg)](https://asciinema.org/a/422188)
 
-**Find Greatest Common Divisor (GCD) game**
+**Greatest Common Divisor (GCD) game**
+_Find the greatest common divisor of two given numbers_
 [![asciicast](https://asciinema.org/a/422196.svg)](https://asciinema.org/a/422196)
+
+**Game 'Progression'**
+_Find the missing number in arithmetic progression_
+[![asciicast](https://asciinema.org/a/422201.svg)](https://asciinema.org/a/422201)
