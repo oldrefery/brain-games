@@ -1,6 +1,5 @@
-import greetingAndGetUserName from '../cli.js';
+import startGame from '../index.js';
 import getRandomNumber from '../utils/generator.js';
-import getAnswer from '../utils/get-answer.js';
 
 const getCorrectAnswer = (num1, currentSign, num2) => {
   let result;
@@ -21,37 +20,23 @@ const getCorrectAnswer = (num1, currentSign, num2) => {
   return result.toString();
 };
 
-const gameCalculator = () => {
-  const name = greetingAndGetUserName();
-  console.log('What is the result of the expression?');
-
-  let leftGuesses = 3;
-  let hasError = false;
+const generateCalculatorStep = () => {
+  const num1 = getRandomNumber(1, 30);
+  const num2 = getRandomNumber(1, 30);
   const signs = ['+', '-', '*'];
+  const currentSign = signs[getRandomNumber(0, 2)];
+  // const currentSign = '+';
 
-  while (leftGuesses > 0 && !hasError) {
-    const num1 = getRandomNumber(1, 30);
-    const num2 = getRandomNumber(1, 30);
-    const currentSign = signs[getRandomNumber(0, 2)];
+  const questionText = `${num1} ${currentSign} ${num2}`;
+  const correctAnswer = getCorrectAnswer(num1, currentSign, num2);
 
-    console.log(`Question: ${num1} ${currentSign} ${num2}`);
-    const answer = getAnswer('Your answer: ');
-    const correctAnswer = getCorrectAnswer(num1, currentSign, num2);
-    if (answer === correctAnswer) {
-      leftGuesses -= 1;
-      console.log('Correct!');
-    } else {
-      hasError = true;
-      console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`,
-      );
-    }
-  }
-  if (!hasError) {
-    console.log(`Congratulations, ${name}!`);
-  } else {
-    console.log(`Let's try again, ${name}!`);
-  }
+  return {
+    correctAnswer,
+    questionText,
+  };
 };
 
+const gameCalculator = () => {
+  startGame(generateCalculatorStep);
+};
 export default gameCalculator;
