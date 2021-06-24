@@ -17,3 +17,7 @@ _Find the greatest common divisor of two given numbers_
 **Game 'Progression'**
 _Find the missing number in arithmetic progression_
 [![asciicast](https://asciinema.org/a/422201.svg)](https://asciinema.org/a/422201)
+
+**Game Prime**
+_Is the number prime?_
+[![asciicast](https://asciinema.org/a/422209.svg)](https://asciinema.org/a/422209)
