@@ -9,3 +9,6 @@
 
 **Calculator game**
 [![asciicast](https://asciinema.org/a/422188.svg)](https://asciinema.org/a/422188)
+
+**Find Greatest Common Divisor (GCD) game**
+[![asciicast](https://asciinema.org/a/422196.svg)](https://asciinema.org/a/422196)
