@@ -4,5 +4,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-**Sample of work**
+**Even game**
 [![asciicast](https://asciinema.org/a/wvkpZz3fSn7rGHfMI92vu23rq.svg)](https://asciinema.org/a/wvkpZz3fSn7rGHfMI92vu23rq)
+
+**Calculator game**
+[![asciicast](https://asciinema.org/a/422188.svg)](https://asciinema.org/a/422188)
