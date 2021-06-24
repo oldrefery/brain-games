@@ -1,10 +1,9 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from './utils/generator.js';
+import greetingAndGetUserName from './cli.js';
+import getAnswer from './utils/get-answer.js';
 
 const gameEven = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const name = greetingAndGetUserName();
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
@@ -15,7 +14,7 @@ const gameEven = () => {
     // const currentNumber = 3;
     const currentNumber = getRandomNumber();
     console.log(`Question: ${currentNumber}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = getAnswer('Your answer: ');
     switch (answer) {
       case 'yes':
         if (currentNumber % 2 === 0) {
